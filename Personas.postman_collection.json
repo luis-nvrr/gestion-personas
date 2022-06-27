@@ -34,7 +34,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/personas/41902711",
+							"raw": "http://localhost:3000/personas/12345",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -42,7 +42,7 @@
 							"port": "3000",
 							"path": [
 								"personas",
-								"41902711"
+								"12345"
 							]
 						}
 					},
@@ -55,7 +55,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"nombre\":  \"luis\",\n    \"apellido\": \"navarro\",\n    \"documento\": 41902711,\n     \"edad\": 22\n}",
+							"raw": "{\n    \"nombre\":  \"luis\",\n    \"apellido\": \"navarro\",\n    \"documento\": 12345,\n     \"edad\": 22\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -63,7 +63,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/personas/41902711",
+							"raw": "http://localhost:3000/personas/12345",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -71,7 +71,7 @@
 							"port": "3000",
 							"path": [
 								"personas",
-								"41902711"
+								"12345"
 							]
 						}
 					},
@@ -83,7 +83,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/personas/41902711",
+							"raw": "http://localhost:3000/personas/12345",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -91,7 +91,7 @@
 							"port": "3000",
 							"path": [
 								"personas",
-								"41902711"
+								"12345"
 							]
 						}
 					},
@@ -104,7 +104,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"nombre\":  \"luis\",\n    \"apellido\": \"gonzalez\",\n    \"documento\": 41902711,\n     \"edad\": 22\n}",
+							"raw": "{\n    \"nombre\":  \"luis\",\n    \"apellido\": \"gonzalez\",\n    \"documento\": 12345,\n     \"edad\": 22\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -112,7 +112,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/personas/41902711",
+							"raw": "http://localhost:3000/personas/12345",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -120,7 +120,7 @@
 							"port": "3000",
 							"path": [
 								"personas",
-								"41902711"
+								"12345"
 							]
 						}
 					},
@@ -132,7 +132,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/personas/41902711/telefonos",
+							"raw": "http://localhost:3000/personas/12345/telefonos",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -140,7 +140,7 @@
 							"port": "3000",
 							"path": [
 								"personas",
-								"41902711",
+								"12345",
 								"telefonos"
 							]
 						}
@@ -153,7 +153,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/personas/41902711/telefonos/1",
+							"raw": "http://localhost:3000/personas/12345/telefonos/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -161,9 +161,35 @@
 							"port": "3000",
 							"path": [
 								"personas",
-								"41902711",
+								"12345",
 								"telefonos",
 								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar por nombre o apellido",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/personas/?filtro=luis",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"personas",
+								""
+							],
+							"query": [
+								{
+									"key": "filtro",
+									"value": "luis"
+								}
 							]
 						}
 					},
@@ -200,7 +226,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/telefonos/7",
+							"raw": "http://localhost:3000/telefonos/10",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -208,7 +234,7 @@
 							"port": "3000",
 							"path": [
 								"telefonos",
-								"7"
+								"10"
 							]
 						}
 					},
@@ -221,7 +247,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"numero\": \"11111111\",\n    \"tipo\": 1,\n    \"documento\": 41902711\n}",
+							"raw": "{\n    \"numero\": \"33333333\",\n    \"tipo\": 3,\n    \"documento\": 12345\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -250,7 +276,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"numero\": \"2343243243\",\n    \"tipo\": 2,\n    \"documento\": 41902711\n}",
+							"raw": "{\n    \"numero\": \"22222229\",\n    \"tipo\": 2,\n    \"documento\": 12345\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -258,7 +284,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/telefonos/7",
+							"raw": "http://localhost:3000/telefonos/11",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -266,7 +292,7 @@
 							"port": "3000",
 							"path": [
 								"telefonos",
-								"7"
+								"11"
 							]
 						}
 					},
@@ -288,7 +314,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/telefonos/7",
+							"raw": "http://localhost:3000/telefonos/10",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -296,7 +322,7 @@
 							"port": "3000",
 							"path": [
 								"telefonos",
-								"7"
+								"10"
 							]
 						}
 					},
@@ -318,7 +344,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/telefonos/7",
+							"raw": "http://localhost:3000/telefonos/10",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -326,7 +352,33 @@
 							"port": "3000",
 							"path": [
 								"telefonos",
-								"7"
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar por secuencia al final",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/telefonos/?sufijo=29",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"telefonos",
+								""
+							],
+							"query": [
+								{
+									"key": "sufijo",
+									"value": "29"
+								}
 							]
 						}
 					},
@@ -389,6 +441,64 @@
 							"port": "3000",
 							"path": [
 								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Iniciar sesión con datos incorrectos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"usuario\": \"inexistente\",\n    \"clave\": \"prueba\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/login/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear usuario con datos faltantes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"usuario\": \"luis\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/usuarios/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"usuarios",
 								""
 							]
 						}

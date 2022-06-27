@@ -15,9 +15,15 @@ router.post("/", async (req, res) => {
   }
 
   const usuarioExistente = await gestorUsuarios.buscarUsuario(usuario);
+
+  if (!usuarioExistente) {
+    res.status(401).json({ error: "datos incorrectos" });
+    return;
+  }
+
   const claveCorrecta = await bcrypt.compare(clave, usuarioExistente.hash);
 
-  if (!usuarioExistente || !claveCorrecta) {
+  if (!claveCorrecta) {
     res.status(401).json({ error: "datos incorrectos" });
     return;
   }

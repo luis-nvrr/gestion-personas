@@ -1,6 +1,7 @@
 const express = require("express");
 const gestorTelefonos = require("../gestores/telefonos");
 const gestorUsuarios = require("../gestores/usuarios");
+const gestorPersonas = require("../gestores/personas");
 const jwt = require("jsonwebtoken");
 
 const router = express.Router();
@@ -13,6 +14,7 @@ router.get("/", async (req, res) => {
     const sufijoInt = parseInt(req.query.sufijo);
     if (isNaN(sufijoInt)) {
       res.status(400).json({ error: "el parámetro debe ser numérico" });
+      return;
     }
 
     res.status(200).json(await gestorTelefonos.consultarTerminaEn(sufijoInt));
@@ -111,12 +113,20 @@ router.delete("/:id", async (req, res) => {
 router.post("/", async (req, res) => {
   const telefono = req.body;
   const encontrado = await gestorTelefonos.consultarPorNumero(telefono.numero);
-  console.log(encontrado);
 
   if (encontrado) {
     res.status(400).json({ error: "el número de teléfono ya existe" });
     return;
   }
+
+  const personaAsociada = await gestorPersonas.consultarPorNumero(
+    telefono.documento
+  );
+  if (!personaAsociada) {
+    res.status(400).json({ error: "la persona no está registrada" });
+    return;
+  }
+
   await gestorTelefonos.agregar(telefono);
   const creado = await gestorTelefonos.consultarPorNumero(telefono.numero);
   res.status(201).json(creado);

@@ -10,6 +10,7 @@ router.post("/", async (req, res) => {
 
   if (!usuario || !clave) {
     res.status(400).json({ error: "se debe indicar usuario y clave" });
+    return;
   }
 
   const usuarioExistente = await gestorUsuarios.buscarUsuario(usuario);
